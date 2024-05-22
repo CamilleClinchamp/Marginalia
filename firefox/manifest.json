@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Marginalia",
+    "version": "1.0.0",
+    "description": "An extension for annotating websites directly.",
+  
+    "permissions": [
+      "contextMenus",
+      "activeTab",
+      "storage"
+    ],
+  
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+  
+    "background": {
+      "scripts": ["background.js"]
+    }
+  }
