@@ -1,3 +1,8 @@
+const link = document.createElement('link');
+link.rel = 'stylesheet';
+link.href = 'https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap';
+document.head.appendChild(link);
+
 browser.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.action === "show-note-popup") {
       createNotePopup(request.selectedText);
@@ -10,7 +15,7 @@ function createNotePopup(selectedText) {
   popup.className = "marginalia-note-popup";
   popup.innerHTML = `
     <textarea id="note-text" placeholder="Type your note here...">${selectedText}</textarea>
-    <button id="save-note">Save Note</button>
+    <button id="save-note"></button>
   `;
   
   // Get the selection range
