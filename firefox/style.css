@@ -20,6 +20,15 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
+.marginalia-note-popup .draggable-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Make sure the textarea is on top of the draggable area */
+}
+
 .marginalia-note-popup textarea {
   border: none;
   background-color: transparent;
