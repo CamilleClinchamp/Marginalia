@@ -3,6 +3,12 @@
   "name": "Marginalia",
   "version": "1.0.0",
   "description": "An extension for adding a bunch of post-its to your favorite websites.",
+  "homepage_url": "https://github.com/CamilleClinchamp/Marginalia",
+  "icons": {
+    "16": "Marginalia_icon_16x16.png",
+    "48": "Marginalia_icon_48x48.png",
+    "128": "Marginalia_icon_128x128.png"
+  },
   "permissions": [
     "contextMenus",
     "activeTab",
@@ -18,5 +24,8 @@
   ],
   "background": {
     "scripts": ["background.js"]
-  }
+  },
+  "content_security_policy": {
+    "extension_pages": "default-src 'self'"
+  }  
 }
